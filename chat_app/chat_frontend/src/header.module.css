@@ -1,0 +1,72 @@
+.header {
+    color:rgb(0, 0, 0);
+    background-color: #ffffff;
+    height: 350px;
+}
+
+.h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -10px;
+    font-size: 32px;
+}
+
+.p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.p2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.input_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.input {
+    width: 550px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.query_button {
+    cursor: pointer;
+    background-color: #ffffff;
+    width:50px;
+    height: 60px;
+    font-size: 40px;
+    color: #000000;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin: 0 5px;
+}
+
+.model_select_1{
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    left:19.2%;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+}
+
+.model_select_2{
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    left:61.75%;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+}

@@ -1,0 +1,52 @@
+.results {
+    display: flex;
+    justify-content: space-between; /* 2つの子要素の間にスペースを追加 */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+    background-color: #ffffff;
+}
+
+/* 各結果コンテナのスタイル設定 */
+.bm25_results, .dpr_results {
+    flex: 1; /* それぞれの結果コンテナが同じ幅を持つようにする */
+    max-width: 48%; /* 必要に応じて調整: 100% - gapの約2倍 */
+    box-sizing: border-box; /* paddingやborderを含む幅にする */
+}
+
+.full_width {
+    max-width: 100%;
+}
+
+.h2, .p {
+    display: flex;
+    flex-direction: column; /* 垂直方向に要素を並べます */
+    align-items: center; /* 水平方向の中央に配置 */
+    justify-content: center;
+}
+
+/* カードのスタイル設定、こちらも必要に応じてカスタマイズ */
+.result_card {
+    border: 2px solid #969595; /* 枠線 */
+    padding: 10px;
+    margin-bottom: 10px; /* 各カードの間のスペース */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 影を追加 */
+    background-color: #ffffff;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.card_title {
+    margin: 5px 10px;
+}
+
+.card_title p{
+    display: inline;
+    margin: 10px 10px;
+}
+
+.subject_name {
+    font-weight: bold;
+}
+
+.subject_number {
+    font-size: 16px;
+}

@@ -1,0 +1,5 @@
+.appcomponent {
+    background-color: #ffffff;  /* 任意の背景色に変更可能 */
+    min-height: 100vh;
+    font-family:'メイリオ', 'Meiryo', sans-serif;
+};
