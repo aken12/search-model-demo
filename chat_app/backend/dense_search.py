@@ -1,8 +1,6 @@
 from elasticsearch import Elasticsearch
 from chat import query_translate
 
-#CERT_FINGERPRINT="7B:9A:52:C0:F6:92:B7:E9:EA:57:EC:59:71:C0:2D:1A:05:A8:6C:4B:90:76:D7:D8:7C:D4:E3:75:D7:8B:C3:43"
-#ELASTIC_PASSWORD='BF7eEcr6ai4o_xciTXot'
 es = Elasticsearch(hosts=[{'host': 'localhost', 'port': 9200,'scheme': 'http'}])
 #es = Elasticsearch(
     #"https://localhost:9200",
