@@ -1,7 +1,9 @@
 .header {
-    color:rgb(0, 0, 0);
-    background-color: #ffffff;
-    height: 350px;
+    color: rgb(222, 221, 221);
+    height: 450px;
+    margin: 0;
+    background-color: #f0f0f0;
+    /* Adjust color as needed */
 }
 
 .h1 {
@@ -10,26 +12,31 @@
     justify-content: center;
     margin-bottom: -10px;
     font-size: 32px;
+    color: #191919;
 }
 
-.p{
+.p {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-top: 8px;
+    margin-bottom: 15px;
     font-size: 24px;
+    color: #191919;
 }
 
 .p2 {
+    font-size: 18px;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    color: #191919;
 }
 
 .input_div {
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
 }
 
 .input {
@@ -40,33 +47,51 @@
 
 .query_button {
     cursor: pointer;
-    background-color: #ffffff;
-    width:50px;
+    background-color: #f0f0f0;
+    width: 50px;
     height: 60px;
     font-size: 40px;
-    color: #000000;
+    color: #191919;
     border: none;
     box-shadow: none;
     outline: none;
     margin: 0 5px;
+    border-radius: 5px;
 }
 
-.model_select_1{
+.model_select_1 {
     cursor: pointer;
     position: relative;
-    top: 20px;
-    left:19.2%;
+    top: 10px;
+    left: 19.2%;
     width: 150px;
     height: 35px;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.model_select_2{
+.model_select_2 {
     cursor: pointer;
     position: relative;
-    top: 20px;
-    left:61.75%;
+    top: 10px;
+    left: 61.75%;
     width: 150px;
     height: 35px;
     font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Input Field */
+.input {
+    padding: 10px;
+    font-size: 18px;
+    width: calc(100% - 50%);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    /* Adjust as needed */
+}
+
+.query_button:hover {
+    background-color: #555;
 }

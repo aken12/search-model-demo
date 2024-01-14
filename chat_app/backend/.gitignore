@@ -2,3 +2,7 @@
 /checkpoint-40000
 /my_encode_dir
 /__pycache__
+simulation.py
+__init__.py
+app.log
+dense_search.py

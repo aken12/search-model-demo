@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between; /* 2つの子要素の間にスペースを追加 */
     flex-wrap: wrap; /* 必要に応じて折り返し */
-    background-color: #ffffff;
+    background-color: #f0f0f0; 
 }
 
 /* 各結果コンテナのスタイル設定 */
