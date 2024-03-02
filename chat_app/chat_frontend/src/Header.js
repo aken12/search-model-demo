@@ -48,16 +48,14 @@ const Header = ( {onQuerySubmit} ) => {
       <select className={styles.model_select_1} name="model_name_1" value={model_name_1} onChange={handleModel1Change} >
       <option value="model1">モデル1を選択</option>
       <option value="BM25">BM25 (単語一致)</option>
-      <option value="E5-small">ベクトル検索（384次元）</option>
-      <option value="E5-large">ベクトル検索（1024次元）</option>
+      <option value="DPR">ベクトル検索</option>
       <option value="Hyblid">ハイブリッド検索</option>
       </select>
 
       <select className={styles.model_select_2} name="model_name_2" value={model_name_2} onChange={handleModel2Change} >
       <option value="model2">モデル2を選択</option>
       <option value="BM25">BM25 (単語一致)</option>
-      <option value="E5-small">ベクトル検索（384次元）</option>
-      <option value="E5-large">ベクトル検索（1024次元）</option>
+      <option value="DPR">ベクトル検索</option>
       <option value="Hyblid">ハイブリッド検索</option>
       </select>
 
