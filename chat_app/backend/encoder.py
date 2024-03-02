@@ -16,12 +16,13 @@ class EncoderModel(nn.Module):
     TRANSFORMER_CLS = AutoModel
 
     def __init__(self,
-                 lm: PreTrainedModel
+                 lm: PreTrainedModel,
+                 model_path: str
                  ):
         super().__init__()
         self.lm = lm
         self.cross_entropy = nn.CrossEntropyLoss(reduction='mean')
-        self.tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-large")
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path=model_path)
 
     def forward(self, query, passage):
         p_reps = self.encode_passage(passage)
@@ -61,12 +62,13 @@ class E5ReteriveModel():
     TRANSFORMER_CLS = AutoModel
 
     def __init__(self,
-                 lm: PreTrainedModel
+                 lm: PreTrainedModel,
+                 model_path: str
                  ):
         super().__init__()
         self.lm = lm
         self.lm.eval()
-        self.tokenizer = AutoTokenizer.from_pretrained("intfloat/multilingual-e5-large")
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.sep_token = self.tokenizer.sep_token
 
     def average_pool(self,
@@ -74,8 +76,8 @@ class E5ReteriveModel():
         last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
         return last_hidden.sum(dim=1) / attention_mask.sum(dim=1)[..., None]
     
-    def generate_e5_embs(self,input_texts):
-        text_dict = self.tokenizer.encode_plus(input_texts, return_tensors='pt', max_length=32)
+    def generate_e5_embs(self,input_texts,max_length=32):
+        text_dict = self.tokenizer.encode_plus(input_texts, return_tensors='pt', max_length=max_length)
         #breakpoint() 
         outputs = self.lm(**text_dict)
         # text_dictの出力　{'input_ids': tensor([[     0,      6,   6242,  19323, 129823,  10793,  19323,      2]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1]])}
@@ -86,6 +88,6 @@ class E5ReteriveModel():
     @classmethod
     def load(cls, model_path):
         lm = cls.TRANSFORMER_CLS.from_pretrained(model_path)
-        model = cls(lm=lm)
+        model = cls(lm=lm,model_path=model_path)
         print(model)
         return model
